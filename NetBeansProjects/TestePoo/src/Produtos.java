@@ -37,7 +37,7 @@ public class Produtos {
         this.quantidade = quantidade;
     }
     
-    public double valorTotal() {
+    public double valorTotal() { //Calcula o valor
         return getPreco() * getQuantidade();
                
     }
