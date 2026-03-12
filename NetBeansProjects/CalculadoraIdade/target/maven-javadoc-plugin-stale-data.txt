@@ -1,0 +1,47 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+--no-fonts
+-encoding
+'UTF-8'
+-protected
+--release
+25
+-sourcepath
+'C:/Users/nonak/OneDrive/Documentos/NetBeansProjects/CalculadoraIdade/src/main/java;C:/Users/nonak/OneDrive/Documentos/NetBeansProjects/CalculadoraIdade/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/nonak/OneDrive/Documentos/NetBeansProjects/CalculadoraIdade/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'CalculadoraIdade 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'CalculadoraIdade 1.0-SNAPSHOT API'
+classes
+com.mycompany.calculadoraidade
+cursoemvideo
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\src\main\java = 1769455438197
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\generated-sources\annotations = 1769447008927
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\allclasses-index.html = 1769456493889
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\allpackages-index.html = 1769456493897
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\element-list = 1769456493738
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\help-doc.html = 1769456493965
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\index-all.html = 1769456493930
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\index.html = 1769456493818
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\member-search-index.js = 1769456493906
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\module-search-index.js = 1769456493901
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\overview-summary.html = 1769456493954
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\overview-tree.html = 1769456493814
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\package-search-index.js = 1769456493902
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\search.html = 1769456493944
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\serialized-form.html = 1769456493785
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\tag-search-index.js = 1769456493911
+C:\Users\nonak\OneDrive\Documentos\NetBeansProjects\CalculadoraIdade\target\reports\apidocs\type-search-index.js = 1769456493904

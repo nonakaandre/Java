@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"com.mycompany.calculadoraidade","l":"CalculadoraIdade"},{"p":"classes","l":"TelaIdade"},{"p":"cursoemvideo","l":"TelaRelogio"}];updateSearchResults();
