@@ -7,9 +7,12 @@ public class FuncionarioPorHora extends Funcionarios{
     private int horasTrabalhadas;
     private double salarioPorHora;
 
+    //É PRECISO ADICIONAR O CONSTRUTOR
+    
+    
     @Override
     public double calcularSalario() {
-        return getHorasTrabalhadas() * getSalarioPorHora();
+        return getHorasTrabalhadas() * getSalarioPorHora(); //TENHO QUE ADICIONAR O this.get...
         
     }
     
