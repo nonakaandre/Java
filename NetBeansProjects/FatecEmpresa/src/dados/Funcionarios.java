@@ -7,6 +7,7 @@ public abstract class Funcionarios {
     private int idFunc;
     
     public abstract double calcularSalario();
+  
 
     public String getNome() {
         return nome;
@@ -24,8 +25,5 @@ public abstract class Funcionarios {
         this.idFunc = idFunc;
     }
 
-    public void salarioFixo(double d) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
 }
