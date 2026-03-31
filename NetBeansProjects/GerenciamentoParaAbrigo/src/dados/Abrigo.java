@@ -1,6 +1,8 @@
 
 package dados;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 
@@ -20,22 +22,58 @@ public class Abrigo {
         return this.pets.get(idx);
     }
     
-    public void adotarAnimal(int idx) {
-        Animal a = this.pets.get(idx);
-        a.adotar();
-    }
-    
-    public String imprimirDisponivel() {
+    public void listarAnimais() {
     String retorno = "Pets Disponíveis\n";
     
+        for (int i = 0; i < pets.size(); i++) {
+        Animal a = pets.get(i);
+        System.out.println(i + " - " + a.getDescricao());
+        }
+    }
+    
+    public int getTotalAguardando() {
+    int count = 0;
+    for (Animal a : pets) {
+        if (!a.isAdotado()) {
+            count++;
+        }
+    }
+    return count;
+    }
+    
+   public String imprimirDisponivel() {
+    String texto = "";
+
     for (int i = 0; i < pets.size(); i++) {
         Animal a = pets.get(i);
+
         if (!a.isAdotado()) {
-            retorno += i + " - " + a.getNome() + "\n";
+            texto += i + " - " + a.getDescricao() + "\n";
         }
     }
 
-    retorno += "Total aguardando adoção: " + Animal.getAguardandoAdocao();
-    return retorno;
+    return texto;
 }
+   
+   public void adotarAnimal(int idx) {
+    if (idx >= 0 && idx < pets.size()) {
+        Animal a = pets.get(idx);
+
+        if (a.isAdotado()) {
+            System.out.println("Animal já foi adotado.");
+        } else {
+            a.setAdotado(true);
+        }
+    } else {
+        System.out.println("Índice inválido.");
+    }
+}
+
+    public int getTotal() {
+    return pets.size();
+    }
+    
+    public void ordenarPorPrioridade() {
+        Collections.sort(pets, Comparator.comparing(Animal::getPrioridadeAdocao));
+    }
 }

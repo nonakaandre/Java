@@ -1,26 +1,23 @@
 
 package dados;
 
-
 public class Cachorro extends Animal {
-    private String raca;
 
-    public Cachorro(String nome, int idade, String hSaude, String raca) {
-        super(nome, idade, hSaude);
-        this.raca = raca;
+    public Cachorro(String nome, int idade) {
+        super(nome, idade);
+        
     }
 
     @Override
-    public String emitirSom() {
-        return "Latido";
+    public String getDescricao() {
+        return "Cachorro | Nome: " + getNome() + " | Idade: " + getIdade();
     }
-
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
+    
+    @Override
+    public int getPrioridadeAdocao(){
+        if(getIdade() >= 10) return 1;
+        if(getIdade() <= 2) return 2;
+        return 3;
     }
 }
     

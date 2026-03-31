@@ -3,26 +3,21 @@ package dados;
 
 
 public class Passaro extends Animal{
-    private String cor;
 
-    public Passaro(String nome, int idade, String hSaude, String cor) {
-        super(nome, idade, hSaude);
-        this.cor = cor;
+    public Passaro(String nome, int idade) {
+        super(nome, idade);
     }
     
     @Override
-        public String emitirSom() {
-            return "Pia";
+        public String getDescricao() {
+            return "Passaro | Nome: " + getNome() + " | Idade: " + getIdade();
         }
-
-    public String getCor() {
-        return cor;
-    }
-
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
     
-        
+    @Override
+        public int getPrioridadeAdocao() {
+            if (getIdade() >= 10) return 1;
+            if (getIdade() <= 1) return 2;
+            return 3;
+        }
     
 }

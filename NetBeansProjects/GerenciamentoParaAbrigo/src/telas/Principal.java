@@ -16,7 +16,7 @@ public class Principal {
             Abrigo abr = new Abrigo();
 
             while (opt != 0) {
-                System.out.println("Bem Vindo ao Abrigo 'Patas Felizes'");
+                System.out.println("\nBem Vindo ao Abrigo 'Patas Felizes'");
                 System.out.println("1 - Cadastrar um animal");
                 System.out.println("2 - Listar animais disponíveis");
                 System.out.println("3 - Total aguardando adoção");
@@ -40,30 +40,12 @@ public class Principal {
                         System.out.println("Idade:");
                         int idade = Integer.parseInt(sc.nextLine());
 
-                        System.out.println("Histórico de saúde:");
-                        String hSaude = sc.nextLine();
-
                         Animal pet = null;
 
                         switch (tipo) {
-                            case 1 -> {
-                                System.out.println("Raça:");
-                                String raca = sc.nextLine();
-                                pet = new Cachorro(nome, idade, hSaude, raca);
-                            }
-
-                            case 2 -> {
-                                System.out.println("Tipo de pelo:");
-                                String tipoPelo = sc.nextLine();
-                                pet = new Gato(nome, idade, hSaude, tipoPelo);
-                            }
-
-                            case 3 -> {
-                                System.out.println("Cor:");
-                                String cor = sc.nextLine();
-                                pet = new Passaro(nome, idade, hSaude, cor);
-                            }
-
+                            case 1 -> pet = new Cachorro(nome, idade);
+                            case 2 -> pet = new Gato(nome, idade);
+                            case 3 -> pet = new Passaro(nome, idade);
                             default -> System.out.println("Tipo inválido.");
                         }
 
@@ -73,18 +55,27 @@ public class Principal {
                         }
                     }
 
-                    case 2 -> System.out.println(abr.imprimirDisponivel());
+                    case 2 -> {
+                        abr.ordenarPorPrioridade();
+                        System.out.println(abr.imprimirDisponivel());
+                    }
 
-                    case 3 -> System.out.println("Total aguardando adoção: " + Animal.getAguardandoAdocao());
+                    case 3 -> {
+                        System.out.println("Total aguardando adoção: " + abr.getTotalAguardando());
+                    }
 
                     case 4 -> {
                         System.out.println(abr.imprimirDisponivel());
 
-                        System.out.println("Digite o número do animal que deseja adotar4:");
+                        System.out.println("Digite o número do animal que deseja adotar:");
                         int idx = Integer.parseInt(sc.nextLine());
 
-                        abr.adotarAnimal(idx);
-                        System.out.println("Animal adotado!");
+                        if (idx >= 0 && idx < abr.getTotal()) {
+                            abr.adotarAnimal(idx);
+                            System.out.println("Animal adotado!");
+                        } else {
+                            System.out.println("Índice inválido.");
+                        }
                     }
 
                     case 0 -> System.out.println("Encerrando...");

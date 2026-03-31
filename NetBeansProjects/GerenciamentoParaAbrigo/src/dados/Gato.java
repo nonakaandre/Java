@@ -2,23 +2,20 @@
 package dados;
 
 public class Gato extends Animal {
-    private String tipoPelo;
 
-    public Gato(String nome, int idade, String hSaude, String tipoPelo) {
-        super(nome, idade, hSaude);
-        this.tipoPelo = tipoPelo;
+    public Gato(String nome, int idade) {
+        super(nome, idade);
     }
 
     @Override
-    public String emitirSom() {
-        return "Miado";
+    public String getDescricao() {
+        return "Gato | Nome: " + getNome() + " | Idade: " + getIdade();
     }
-
-    public String getTipoPelo() {
-        return tipoPelo;
-    }
-
-    public void setTipoPelo(String tipoPelo) {
-        this.tipoPelo = tipoPelo;
+  
+    @Override 
+    public int getPrioridadeAdocao() {
+        if(getIdade() >= 10) return 1;
+        if(getIdade() <= 2) return 2;
+        return 3;
     }
 }
