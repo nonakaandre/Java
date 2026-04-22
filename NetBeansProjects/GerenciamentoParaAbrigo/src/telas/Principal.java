@@ -1,3 +1,5 @@
+//Tive bastante dificuldade em criar a classe "Principal e Abrigo", acabei precisando de ajuda para entender como montar todas estrutura.
+
 package telas;
 
 import dados.Abrigo;
