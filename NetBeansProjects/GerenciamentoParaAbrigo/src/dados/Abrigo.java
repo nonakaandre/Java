@@ -20,16 +20,6 @@ public class Abrigo {
         return this.pets.get(idx);
     }
 
-    public void listarAnimais() {
-        String retorno = "Pets Disponíveis\n";
-
-        for (int i = 0; i < pets.size(); i++) {
-            Animal a = pets.get(i);
-            if (!a.isAdotado()) {
-                System.out.println(i + " - " + a.getDescricao());
-            }
-        }
-    }
 
     public int getTotalAguardando() {
         int count = 0;
